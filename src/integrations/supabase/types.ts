@@ -14,13 +14,126 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      order_access: {
+        Row: {
+          created_at: string
+          id: string
+          order_id: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          order_id: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          order_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "order_access_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      orders: {
+        Row: {
+          created_at: string
+          group_type: string
+          id: string
+          target_n: number
+        }
+        Insert: {
+          created_at?: string
+          group_type: string
+          id?: string
+          target_n: number
+        }
+        Update: {
+          created_at?: string
+          group_type?: string
+          id?: string
+          target_n?: number
+        }
+        Relationships: []
+      }
+      responses: {
+        Row: {
+          answers: Json
+          created_at: string
+          id: string
+          survey_id: string
+        }
+        Insert: {
+          answers: Json
+          created_at?: string
+          id?: string
+          survey_id: string
+        }
+        Update: {
+          answers?: Json
+          created_at?: string
+          id?: string
+          survey_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "responses_survey_id_fkey"
+            columns: ["survey_id"]
+            isOneToOne: false
+            referencedRelation: "surveys"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      surveys: {
+        Row: {
+          closes_at: string
+          created_at: string
+          id: string
+          order_id: string
+          share_token: string
+        }
+        Insert: {
+          closes_at: string
+          created_at?: string
+          id?: string
+          order_id: string
+          share_token?: string
+        }
+        Update: {
+          closes_at?: string
+          created_at?: string
+          id?: string
+          order_id?: string
+          share_token?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "surveys_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_admin_response_count: {
+        Args: { p_order_id: string }
+        Returns: number
+      }
     }
     Enums: {
       [_ in never]: never
