@@ -12,30 +12,29 @@ const AdminStart = () => {
     target: number;
   }) || {};
 
-  const surveyLink = "https://survey.ketaakatemia.fi/s/abc123";
+  const surveyLink = "https://kysely.ketaakatemia.fi/s/abc123";
 
-  const reminderTemplate = `Hi — a quick reminder to complete the survey when you have a moment. It takes about 5 minutes. Here's the link: ${surveyLink}`;
+  const reminderTemplate = `Hei — muistutuksena kyselystä, jonka voit täyttää kun ehdit. Se vie noin 5 minuuttia. Linkki: ${surveyLink}`;
 
   return (
     <PageShell>
       <Logo />
 
       <h1 className="text-2xl font-semibold text-foreground mb-2">
-        Your survey is ready
+        Kysely on valmis
       </h1>
       <p className="text-base text-muted-foreground mb-10 leading-relaxed">
-        A general snapshot of where everyday work currently functions well and where it doesn't.
+        Yleiskuva siitä, mikä arjen työssä toimii hyvin ja mikä ei.
       </p>
 
       <div className="space-y-6 mb-10">
-        <InfoRow label="Respondent group" value={groupLabels[group]} />
-        <InfoRow label="Target responses" value={String(target)} />
-        <InfoRow label="Survey open time" value="14 days" />
+        <InfoRow label="Vastaajaryhmä" value={groupLabels[group]} />
+        <InfoRow label="Tavoite" value={`${target} vastausta`} />
+        <InfoRow label="Kysely auki" value="14 päivää" />
       </div>
 
-      {/* Survey link */}
       <div className="space-y-2 mb-8">
-        <label className="text-sm font-medium text-foreground">Survey link</label>
+        <label className="text-sm font-medium text-foreground">Kyselylinkki</label>
         <div className="flex items-center gap-2">
           <div className="flex-1 px-4 py-3 bg-surface border border-border rounded-lg text-sm text-foreground font-mono truncate">
             {surveyLink}
@@ -45,24 +44,22 @@ const AdminStart = () => {
             className="shrink-0"
             onClick={() => navigator.clipboard.writeText(surveyLink)}
           >
-            Copy
+            Kopioi
           </Button>
         </div>
       </div>
 
-      {/* Instructions */}
       <div className="space-y-4 mb-8 p-5 bg-surface rounded-lg border border-border">
-        <h2 className="text-sm font-medium text-foreground">How to share</h2>
+        <h2 className="text-sm font-medium text-foreground">Näin jaat linkin</h2>
         <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
-          <li>Send the link directly to your respondents via email or message.</li>
-          <li>Each person completes the survey individually.</li>
-          <li>Respondents will not see results or other responses.</li>
+          <li>Lähetä linkki vastaajille sähköpostilla tai viestillä.</li>
+          <li>Jokainen vastaa kyselyyn itsenäisesti.</li>
+          <li>Vastaajat eivät näe tuloksia tai muiden vastauksia.</li>
         </ul>
       </div>
 
-      {/* Reminder template */}
       <div className="space-y-2 mb-10 p-5 bg-surface rounded-lg border border-border">
-        <h2 className="text-sm font-medium text-foreground">Reminder message</h2>
+        <h2 className="text-sm font-medium text-foreground">Muistutusviesti</h2>
         <p className="text-sm text-muted-foreground leading-relaxed">
           {reminderTemplate}
         </p>
@@ -72,7 +69,7 @@ const AdminStart = () => {
           className="text-xs text-primary"
           onClick={() => navigator.clipboard.writeText(reminderTemplate)}
         >
-          Copy reminder
+          Kopioi muistutus
         </Button>
       </div>
 
@@ -80,7 +77,7 @@ const AdminStart = () => {
         onClick={() => navigate("/admin/running", { state: { group, target } })}
         className="w-full py-6 text-base rounded-lg"
       >
-        View survey status
+        Näytä kyselyn tilanne
       </Button>
     </PageShell>
   );

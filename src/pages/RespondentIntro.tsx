@@ -12,13 +12,13 @@ const RespondentIntro = () => {
 
       <div className="mb-12">
         <h1 className="text-2xl font-semibold text-foreground mb-6">
-          Before you begin
+          Ennen kuin aloitat
         </h1>
         <p className="text-base text-muted-foreground leading-relaxed mb-4">
-          The purpose of this survey is to get a general view of what currently works in everyday work and what doesn't.
+          Tämän kyselyn tarkoitus on muodostaa yleiskuva siitä, mikä arjen työssä toimii ja mikä ei.
         </p>
         <p className="text-base text-muted-foreground leading-relaxed">
-          Responses are handled as a combined overview and cannot be linked to individuals.
+          Vastaukset käsitellään kokonaiskuvana eikä niitä voida yhdistää yksittäisiin henkilöihin.
         </p>
       </div>
 
@@ -26,7 +26,7 @@ const RespondentIntro = () => {
         onClick={() => navigate("/survey/questions")}
         className="w-full py-6 text-base rounded-lg"
       >
-        Start survey
+        Aloita kysely
       </Button>
     </PageShell>
   );

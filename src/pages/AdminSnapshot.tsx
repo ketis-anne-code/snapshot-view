@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import DistributionBar from "@/components/DistributionBar";
 import { surveyQuestions } from "@/lib/survey-data";
 
-// Mock response data for each question
 const mockResponses: number[][] = [
   [5, 6, 7, 6, 5, 7, 8, 6],
   [4, 5, 6, 5, 4, 6, 5, 7],
@@ -27,11 +26,11 @@ const AdminSnapshot = () => {
       <Logo />
 
       <h1 className="text-2xl font-semibold text-foreground mb-2">
-        Survey overview
+        Tilannekuva
       </h1>
       <p className="text-base text-muted-foreground mb-10 leading-relaxed">
-        This view shows how responses are distributed.
-        It does not include interpretation or conclusions.
+        Tämä näkymä kertoo miten vastaukset jakautuvat.
+        Se ei sisällä tulkintaa tai johtopäätöksiä.
       </p>
 
       <div className="space-y-8 mb-10">
@@ -46,14 +45,14 @@ const AdminSnapshot = () => {
       </div>
 
       <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
-        This is situational information, not analysis.
+        Tämä on tilannetieto, ei analyysi.
       </p>
 
       <Button
         onClick={() => navigate("/admin/analysis")}
         className="w-full py-6 text-base rounded-lg"
       >
-        Continue to analysis
+        Jatka analyysiin
       </Button>
     </PageShell>
   );

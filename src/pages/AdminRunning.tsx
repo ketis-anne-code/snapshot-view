@@ -18,7 +18,6 @@ const AdminRunning = () => {
     target: number;
   }) || {};
 
-  // Mock data
   const collected = 8;
   const daysRemaining = 9;
   const status = getResponseStatus(collected, target);
@@ -28,28 +27,26 @@ const AdminRunning = () => {
       <Logo />
 
       <h1 className="text-2xl font-semibold text-foreground mb-2">
-        Survey in progress
+        Kysely käynnissä
       </h1>
       <p className="text-base text-muted-foreground mb-10 leading-relaxed">
         {groupLabels[group]}
       </p>
 
-      {/* Response count */}
       <div className="p-6 bg-surface rounded-lg border border-border mb-6">
         <div className="text-4xl font-semibold text-foreground mb-1">
           {collected}
           <span className="text-lg text-muted-foreground font-normal"> / {target}</span>
         </div>
-        <p className="text-sm text-muted-foreground mb-4">Responses collected</p>
+        <p className="text-sm text-muted-foreground mb-4">Vastauksia kerätty</p>
         <StatusDot status={status} label={getStatusLabel(status)} />
       </div>
 
-      {/* Days remaining */}
       <div className="p-6 bg-surface rounded-lg border border-border mb-10">
         <div className="text-2xl font-semibold text-foreground mb-1">
-          {daysRemaining} days
+          {daysRemaining} päivää
         </div>
-        <p className="text-sm text-muted-foreground">Remaining until survey closes</p>
+        <p className="text-sm text-muted-foreground">Aikaa jäljellä ennen kyselyn sulkeutumista</p>
       </div>
 
       <Button
@@ -59,7 +56,7 @@ const AdminRunning = () => {
         variant="outline"
         className="w-full py-6 text-base rounded-lg"
       >
-        Preview closed view
+        Esikatsele tilannekuvaa
       </Button>
     </PageShell>
   );
