@@ -13,7 +13,7 @@ const AdminAnalysis = () => {
   const [selected, setSelected] = useState<AnalysisOption>("written");
 
   const deliveryDate = addBusinessDays(new Date(), 7);
-  const formattedDate = deliveryDate.toLocaleDateString("en-GB", {
+  const formattedDate = deliveryDate.toLocaleDateString("fi-FI", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -22,13 +22,13 @@ const AdminAnalysis = () => {
   const options: { value: AnalysisOption; title: string; desc: string }[] = [
     {
       value: "written",
-      title: "Written analysis only",
-      desc: "A detailed written overview delivered to you.",
+      title: "Kirjallinen analyysi",
+      desc: "Yksityiskohtainen kirjallinen katsaus toimitettuna sinulle.",
     },
     {
       value: "written-review",
-      title: "Written analysis + joint review",
-      desc: "Written overview plus a session to walk through findings together.",
+      title: "Kirjallinen analyysi + yhteinen läpikäynti",
+      desc: "Kirjallinen katsaus ja tapaaminen, jossa käydään havainnot yhdessä läpi.",
     },
   ];
 
@@ -37,25 +37,24 @@ const AdminAnalysis = () => {
       <Logo />
 
       <h1 className="text-2xl font-semibold text-foreground mb-2">
-        Analysis in progress
+        Analyysi käynnissä
       </h1>
       <p className="text-base text-muted-foreground mb-10 leading-relaxed">
-        Written analysis will be delivered within 7 business days.
+        Kirjallinen analyysi toimitetaan 7 arkipäivän kuluessa.
       </p>
 
       <div className="p-5 bg-surface rounded-lg border border-border mb-8">
         <div className="text-sm text-muted-foreground mb-1">
-          Expected delivery
+          Arvioitu toimituspäivä
         </div>
         <div className="text-lg font-medium text-foreground">
           {formattedDate}
         </div>
       </div>
 
-      {/* Delivery options */}
       <div className="space-y-3 mb-8">
         <label className="text-sm font-medium text-foreground">
-          Choose your delivery
+          Valitse toimitustapa
         </label>
         {options.map((opt) => (
           <button
@@ -76,14 +75,13 @@ const AdminAnalysis = () => {
         ))}
       </div>
 
-      {/* Calendar placeholder */}
       {selected === "written-review" && (
         <div className="p-5 bg-surface rounded-lg border border-border mb-8">
           <p className="text-sm text-muted-foreground mb-3">
-            Book a time for the joint review session
+            Varaa aika yhteiselle läpikäynnille
           </p>
           <div className="h-32 rounded-md border border-dashed border-border flex items-center justify-center text-sm text-muted-foreground">
-            Calendar booking will appear here
+            Kalenterivaraus tulee tähän
           </div>
         </div>
       )}
@@ -92,7 +90,7 @@ const AdminAnalysis = () => {
         onClick={() => navigate("/admin/final", { state: { option: selected } })}
         className="w-full py-6 text-base rounded-lg"
       >
-        Confirm
+        Vahvista
       </Button>
     </PageShell>
   );

@@ -7,10 +7,10 @@ const SurveyComplete = () => {
       <Logo />
 
       <h1 className="text-2xl font-semibold text-foreground mb-4">
-        Thank you
+        Kiitos
       </h1>
       <p className="text-base text-muted-foreground leading-relaxed">
-        Your response has been recorded. You can close this page.
+        Vastauksesi on tallennettu. Voit sulkea tämän sivun.
       </p>
     </PageShell>
   );

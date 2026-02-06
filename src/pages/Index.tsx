@@ -11,11 +11,11 @@ const Index = () => {
       <Logo />
 
       <h1 className="text-3xl font-semibold text-foreground mb-4 leading-tight">
-        Understand how work<br />actually functions
+        Ymmärrä miten työ<br />oikeasti toimii
       </h1>
       <p className="text-base text-muted-foreground mb-12 leading-relaxed max-w-sm">
-        A structured way to see what works in everyday operations — and what doesn't.
-        No rankings, no individual data.
+        Jäsennelty tapa nähdä, mikä arjen työssä toimii — ja mikä ei.
+        Ei vertailua, ei yksilötietoja.
       </p>
 
       <div className="space-y-3">
@@ -23,28 +23,28 @@ const Index = () => {
           onClick={() => navigate("/onboarding")}
           className="w-full py-6 text-base rounded-lg"
         >
-          Set up a survey
+          Luo kysely
         </Button>
         <Button
           onClick={() => navigate("/survey/intro")}
           variant="outline"
           className="w-full py-6 text-base rounded-lg"
         >
-          I'm a respondent
+          Olen vastaaja
         </Button>
       </div>
 
       <div className="mt-16 pt-8 border-t border-border">
         <p className="text-xs text-muted-foreground leading-relaxed">
-          Demo navigation
+          Demonäkymät
         </p>
         <div className="flex flex-wrap gap-2 mt-3">
           {[
-            { label: "Admin start", path: "/admin/start" },
-            { label: "Survey running", path: "/admin/running" },
-            { label: "Snapshot", path: "/admin/snapshot" },
-            { label: "Analysis", path: "/admin/analysis" },
-            { label: "Final", path: "/admin/final" },
+            { label: "Hallinta", path: "/admin/start" },
+            { label: "Kysely käynnissä", path: "/admin/running" },
+            { label: "Tilannekuva", path: "/admin/snapshot" },
+            { label: "Analyysi", path: "/admin/analysis" },
+            { label: "Valmis", path: "/admin/final" },
           ].map((link) => (
             <button
               key={link.path}

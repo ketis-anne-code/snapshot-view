@@ -1,22 +1,22 @@
 export type RespondentGroup = "expert" | "manager" | "executive";
 
 export const groupLabels: Record<RespondentGroup, string> = {
-  expert: "Expert team",
-  manager: "Manager team",
-  executive: "Executive team",
+  expert: "Asiantuntijatiimi",
+  manager: "Esihenkilötiimi",
+  executive: "Johtoryhmä",
 };
 
 export const surveyQuestions = [
-  "Everyday tasks are clear and well-organized.",
-  "The right information is available when needed.",
-  "Decisions get made without unnecessary delays.",
-  "Collaboration across the team works smoothly.",
-  "Priorities are easy to understand and follow.",
-  "Current tools and processes support the work well.",
-  "Workload feels manageable on a typical week.",
-  "New ideas or improvements are easy to bring up.",
-  "Communication within the team is clear and timely.",
-  "The team has what it needs to do good work.",
+  "Päivittäiset tehtävät ovat selkeitä ja hyvin järjestettyjä.",
+  "Tarvittava tieto on saatavilla silloin kun sitä tarvitaan.",
+  "Päätökset syntyvät ilman turhia viiveitä.",
+  "Yhteistyö tiimin sisällä sujuu hyvin.",
+  "Prioriteetit ovat helppo ymmärtää ja seurata.",
+  "Nykyiset työkalut ja prosessit tukevat työtä hyvin.",
+  "Työmäärä tuntuu hallittavalta tavallisella viikolla.",
+  "Uusia ideoita ja parannusehdotuksia on helppo tuoda esiin.",
+  "Viestintä tiimin sisällä on selkeää ja oikea-aikaista.",
+  "Tiimillä on edellytykset tehdä hyvää työtä.",
 ];
 
 export function getResponseStatus(
@@ -32,11 +32,11 @@ export function getResponseStatus(
 export function getStatusLabel(status: "sufficient" | "indicative" | "limited"): string {
   switch (status) {
     case "sufficient":
-      return "Sufficient responses";
+      return "Riittävä vastausmäärä";
     case "indicative":
-      return "Indicative responses";
+      return "Suuntaa antava vastausmäärä";
     case "limited":
-      return "Limited responses";
+      return "Rajallinen vastausmäärä";
   }
 }
 

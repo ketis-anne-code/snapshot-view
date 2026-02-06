@@ -13,35 +13,33 @@ const AdminFinal = () => {
       <Logo />
 
       <h1 className="text-2xl font-semibold text-foreground mb-2">
-        Everything is set
+        Kaikki on valmista
       </h1>
       <p className="text-base text-muted-foreground mb-10 leading-relaxed">
-        Your analysis will be delivered as confirmed.
+        Analyysi toimitetaan vahvistetulla tavalla.
       </p>
 
-      {/* Written analysis */}
       <div className="p-5 bg-surface rounded-lg border border-border mb-4">
-        <div className="text-sm text-muted-foreground mb-1">Written analysis</div>
+        <div className="text-sm text-muted-foreground mb-1">Kirjallinen analyysi</div>
         <div className="text-base font-medium text-foreground mb-3">
-          Will be shared when ready
+          Jaetaan kun valmis
         </div>
         <Button variant="outline" size="sm" disabled>
-          Download (available soon)
+          Lataa (saatavilla pian)
         </Button>
       </div>
 
-      {/* Joint review confirmation */}
       {includesReview && (
         <div className="p-5 bg-surface rounded-lg border border-border mb-4">
-          <div className="text-sm text-muted-foreground mb-1">Joint review session</div>
+          <div className="text-sm text-muted-foreground mb-1">Yhteinen läpikäynti</div>
           <div className="text-base font-medium text-foreground">
-            Confirmed — you'll receive a calendar invite
+            Vahvistettu — saat kalenterikutsun
           </div>
         </div>
       )}
 
       <p className="text-sm text-muted-foreground mt-8 leading-relaxed">
-        The analysis can be used with or without further collaboration.
+        Analyysiä voi hyödyntää sellaisenaan tai jatkoyhteistyön pohjana.
       </p>
     </PageShell>
   );

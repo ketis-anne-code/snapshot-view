@@ -8,9 +8,9 @@ import { cn } from "@/lib/utils";
 import { RespondentGroup, groupLabels } from "@/lib/survey-data";
 
 const groups: { value: RespondentGroup; description: string }[] = [
-  { value: "expert", description: "People who do the hands-on work" },
-  { value: "manager", description: "People who lead teams and coordinate" },
-  { value: "executive", description: "People who set direction and priorities" },
+  { value: "expert", description: "Ihmiset jotka tekevät käytännön työn" },
+  { value: "manager", description: "Ihmiset jotka johtavat tiimejä ja koordinoivat" },
+  { value: "executive", description: "Ihmiset jotka asettavat suunnan ja prioriteetit" },
 ];
 
 const BuyerOnboarding = () => {
@@ -34,16 +34,15 @@ const BuyerOnboarding = () => {
       <Logo />
 
       <h1 className="text-2xl font-semibold text-foreground mb-2">
-        Set up your survey
+        Määritä kysely
       </h1>
       <p className="text-base text-muted-foreground mb-10 leading-relaxed">
-        Select who will be responding and how many people to include.
+        Valitse vastaajaryhmä ja osallistujamäärä.
       </p>
 
-      {/* Group selection */}
       <div className="space-y-3 mb-10">
         <label className="text-sm font-medium text-foreground">
-          Respondent group
+          Vastaajaryhmä
         </label>
         {groups.map((g) => (
           <button
@@ -66,22 +65,21 @@ const BuyerOnboarding = () => {
         ))}
       </div>
 
-      {/* Respondent count */}
       <div className="space-y-2 mb-12">
         <label className="text-sm font-medium text-foreground">
-          Number of respondents
+          Vastaajien lukumäärä
         </label>
         <Input
           type="number"
           min={1}
           max={25}
-          placeholder="e.g. 12"
+          placeholder="esim. 12"
           value={respondentCount}
           onChange={(e) => setRespondentCount(e.target.value)}
           className="max-w-[160px] bg-surface"
         />
         <p className="text-xs text-muted-foreground">
-          Maximum 25 respondents per survey
+          Enintään 25 vastaajaa per kysely
         </p>
       </div>
 
@@ -90,7 +88,7 @@ const BuyerOnboarding = () => {
         disabled={!isValid}
         className="w-full py-6 text-base rounded-lg"
       >
-        Continue
+        Jatka
       </Button>
     </PageShell>
   );

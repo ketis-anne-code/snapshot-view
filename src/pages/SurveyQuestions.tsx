@@ -43,17 +43,17 @@ const SurveyQuestions = () => {
         <Logo />
 
         <div className="mb-3 text-sm text-muted-foreground">
-          Optional
+          Vapaaehtoinen
         </div>
 
         <h1 className="text-xl font-semibold text-foreground mb-6 leading-relaxed">
-          Is there anything else you'd like to add?
+          Haluatko lisätä jotain?
         </h1>
 
         <Textarea
           value={openText}
           onChange={(e) => setOpenText(e.target.value)}
-          placeholder="Write freely — this is optional."
+          placeholder="Kirjoita vapaasti — tämä on vapaaehtoinen."
           className="min-h-[120px] bg-surface mb-8"
         />
 
@@ -61,7 +61,7 @@ const SurveyQuestions = () => {
           onClick={handleSubmit}
           className="w-full py-6 text-base rounded-lg"
         >
-          Submit survey
+          Lähetä vastaukset
         </Button>
       </PageShell>
     );
@@ -71,22 +71,18 @@ const SurveyQuestions = () => {
     <PageShell>
       <Logo />
 
-      {/* Progress */}
       <div className="mb-8 text-sm text-muted-foreground">
         {currentIndex + 1} / {surveyQuestions.length}
       </div>
 
-      {/* Question */}
       <h1 className="text-xl font-semibold text-foreground mb-10 leading-relaxed">
         {surveyQuestions[currentIndex]}
       </h1>
 
-      {/* Scale */}
       <div className="mb-10">
         <ScaleInput value={currentAnswer} onChange={handleSelect} />
       </div>
 
-      {/* Navigation */}
       <div className="flex gap-3">
         {currentIndex > 0 && (
           <Button
@@ -94,7 +90,7 @@ const SurveyQuestions = () => {
             onClick={() => setCurrentIndex((i) => i - 1)}
             className="flex-1 py-6 text-base rounded-lg"
           >
-            Back
+            Takaisin
           </Button>
         )}
         <Button
@@ -102,7 +98,7 @@ const SurveyQuestions = () => {
           disabled={currentAnswer === null}
           className="flex-1 py-6 text-base rounded-lg"
         >
-          {isLastQuestion ? "Continue" : "Next"}
+          {isLastQuestion ? "Jatka" : "Seuraava"}
         </Button>
       </div>
     </PageShell>
