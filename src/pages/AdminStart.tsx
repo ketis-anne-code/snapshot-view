@@ -1,0 +1,96 @@
+import { useLocation, useNavigate } from "react-router-dom";
+import PageShell from "@/components/PageShell";
+import Logo from "@/components/Logo";
+import { Button } from "@/components/ui/button";
+import { groupLabels, RespondentGroup } from "@/lib/survey-data";
+
+const AdminStart = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { group = "expert", target = 12 } = (location.state as {
+    group: RespondentGroup;
+    target: number;
+  }) || {};
+
+  const surveyLink = "https://survey.ketaakatemia.fi/s/abc123";
+
+  const reminderTemplate = `Hi — a quick reminder to complete the survey when you have a moment. It takes about 5 minutes. Here's the link: ${surveyLink}`;
+
+  return (
+    <PageShell>
+      <Logo />
+
+      <h1 className="text-2xl font-semibold text-foreground mb-2">
+        Your survey is ready
+      </h1>
+      <p className="text-base text-muted-foreground mb-10 leading-relaxed">
+        A general snapshot of where everyday work currently functions well and where it doesn't.
+      </p>
+
+      <div className="space-y-6 mb-10">
+        <InfoRow label="Respondent group" value={groupLabels[group]} />
+        <InfoRow label="Target responses" value={String(target)} />
+        <InfoRow label="Survey open time" value="14 days" />
+      </div>
+
+      {/* Survey link */}
+      <div className="space-y-2 mb-8">
+        <label className="text-sm font-medium text-foreground">Survey link</label>
+        <div className="flex items-center gap-2">
+          <div className="flex-1 px-4 py-3 bg-surface border border-border rounded-lg text-sm text-foreground font-mono truncate">
+            {surveyLink}
+          </div>
+          <Button
+            variant="outline"
+            className="shrink-0"
+            onClick={() => navigator.clipboard.writeText(surveyLink)}
+          >
+            Copy
+          </Button>
+        </div>
+      </div>
+
+      {/* Instructions */}
+      <div className="space-y-4 mb-8 p-5 bg-surface rounded-lg border border-border">
+        <h2 className="text-sm font-medium text-foreground">How to share</h2>
+        <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
+          <li>Send the link directly to your respondents via email or message.</li>
+          <li>Each person completes the survey individually.</li>
+          <li>Respondents will not see results or other responses.</li>
+        </ul>
+      </div>
+
+      {/* Reminder template */}
+      <div className="space-y-2 mb-10 p-5 bg-surface rounded-lg border border-border">
+        <h2 className="text-sm font-medium text-foreground">Reminder message</h2>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          {reminderTemplate}
+        </p>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="text-xs text-primary"
+          onClick={() => navigator.clipboard.writeText(reminderTemplate)}
+        >
+          Copy reminder
+        </Button>
+      </div>
+
+      <Button
+        onClick={() => navigate("/admin/running", { state: { group, target } })}
+        className="w-full py-6 text-base rounded-lg"
+      >
+        View survey status
+      </Button>
+    </PageShell>
+  );
+};
+
+const InfoRow = ({ label, value }: { label: string; value: string }) => (
+  <div className="flex justify-between items-baseline">
+    <span className="text-sm text-muted-foreground">{label}</span>
+    <span className="text-sm font-medium text-foreground">{value}</span>
+  </div>
+);
+
+export default AdminStart;

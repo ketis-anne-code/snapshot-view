@@ -5,6 +5,15 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import BuyerOnboarding from "./pages/BuyerOnboarding";
+import AdminStart from "./pages/AdminStart";
+import AdminRunning from "./pages/AdminRunning";
+import AdminSnapshot from "./pages/AdminSnapshot";
+import AdminAnalysis from "./pages/AdminAnalysis";
+import AdminFinal from "./pages/AdminFinal";
+import RespondentIntro from "./pages/RespondentIntro";
+import SurveyQuestions from "./pages/SurveyQuestions";
+import SurveyComplete from "./pages/SurveyComplete";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +25,15 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/onboarding" element={<BuyerOnboarding />} />
+          <Route path="/admin/start" element={<AdminStart />} />
+          <Route path="/admin/running" element={<AdminRunning />} />
+          <Route path="/admin/snapshot" element={<AdminSnapshot />} />
+          <Route path="/admin/analysis" element={<AdminAnalysis />} />
+          <Route path="/admin/final" element={<AdminFinal />} />
+          <Route path="/survey/intro" element={<RespondentIntro />} />
+          <Route path="/survey/questions" element={<SurveyQuestions />} />
+          <Route path="/survey/complete" element={<SurveyComplete />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
