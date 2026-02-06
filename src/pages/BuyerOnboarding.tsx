@@ -10,7 +10,6 @@ import { RespondentGroup, groupLabels } from "@/lib/survey-data";
 const groups: { value: RespondentGroup; description: string }[] = [
   { value: "expert", description: "Ihmiset jotka tekevät käytännön työn" },
   { value: "manager", description: "Ihmiset jotka johtavat tiimejä ja koordinoivat" },
-  { value: "executive", description: "Ihmiset jotka asettavat suunnan ja prioriteetit" },
 ];
 
 const BuyerOnboarding = () => {
