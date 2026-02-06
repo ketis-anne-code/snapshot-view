@@ -11,6 +11,10 @@ import AdminRunning from "./pages/AdminRunning";
 import AdminSnapshot from "./pages/AdminSnapshot";
 import AdminAnalysis from "./pages/AdminAnalysis";
 import AdminFinal from "./pages/AdminFinal";
+import AdminSignIn from "./pages/AdminSignIn";
+import AdminCallback from "./pages/AdminCallback";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminOrderDetail from "./pages/AdminOrderDetail";
 import RespondentIntro from "./pages/RespondentIntro";
 import SurveyQuestions from "./pages/SurveyQuestions";
 import SurveyComplete from "./pages/SurveyComplete";
@@ -26,6 +30,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/onboarding" element={<BuyerOnboarding />} />
+          <Route path="/admin/sign-in" element={<AdminSignIn />} />
+          <Route path="/admin/callback" element={<AdminCallback />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/order/:orderId" element={<AdminOrderDetail />} />
           <Route path="/admin/start" element={<AdminStart />} />
           <Route path="/admin/running" element={<AdminRunning />} />
           <Route path="/admin/snapshot" element={<AdminSnapshot />} />
