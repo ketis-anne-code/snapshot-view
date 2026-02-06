@@ -14,7 +14,7 @@ export interface SurveyQuestion {
 
 export const surveyQuestions: SurveyQuestion[] = [
   { text: "Koen hallitsevani omaa työtäni arjessa.", anchorLow: "En lainkaan", anchorHigh: "Erittäin hyvin" },
-  { text: "Minulle on selvää, mitä minun kuuluu tehdä päivittäin.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Minulle on selvää, mitä minun pitää kunakin päivänä saada tehtyä.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
   { text: "Pystyn priorisoimaan työtehtäväni arjessa.", anchorLow: "En pysty", anchorHigh: "Pystyn erittäin hyvin" },
   { text: "Työn suunnittelu ja organisointi tuntuu minulle helpolta.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
   { text: "Työmääräni tuntuu hallittavalta suurimman osan ajasta.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
