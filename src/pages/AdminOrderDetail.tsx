@@ -16,7 +16,7 @@ const AdminOrderDetail = () => {
 
   const [hasAccess, setHasAccess] = useState<boolean | null>(null);
   const [order, setOrder] = useState<{ group_type: string; target_n: number } | null>(null);
-  const [survey, setSurvey] = useState<{ share_token: string; closes_at: string } | null>(null);
+  const [survey, setSurvey] = useState<{ id: string; share_token: string; closes_at: string } | null>(null);
   const [responseCount, setResponseCount] = useState(0);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const AdminOrderDetail = () => {
       // Fetch survey
       const { data: s } = await supabase
         .from("surveys")
-        .select("share_token, closes_at")
+        .select("id, share_token, closes_at")
         .eq("order_id", orderId)
         .maybeSingle();
       setSurvey(s);
@@ -166,6 +166,15 @@ const AdminOrderDetail = () => {
           Kooste vastauksista on saatavilla, kun kysely on sulkeutunut. Yksittäisiä vastauksia ei näytetä.
         </p>
       </div>
+
+      {survey && (
+        <Button
+          onClick={() => navigate(`/admin/results/${survey.id}`)}
+          className="w-full py-6 text-base rounded-lg"
+        >
+          Näytä tulokset
+        </Button>
+      )}
     </PageShell>
   );
 };
