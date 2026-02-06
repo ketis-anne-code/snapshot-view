@@ -37,7 +37,7 @@ const AdminSnapshot = () => {
         {surveyQuestions.map((question, i) => (
           <div key={i} className="p-5 bg-surface rounded-lg border border-border">
             <p className="text-sm font-medium text-foreground mb-4">
-              {question}
+              {question.text}
             </p>
             <DistributionBar responses={mockResponses[i]} />
           </div>

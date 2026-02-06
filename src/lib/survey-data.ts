@@ -6,17 +6,26 @@ export const groupLabels: Record<RespondentGroup, string> = {
   executive: "Johtoryhmä",
 };
 
-export const surveyQuestions = [
-  "Päivittäiset tehtävät ovat selkeitä ja hyvin järjestettyjä.",
-  "Tarvittava tieto on saatavilla silloin kun sitä tarvitaan.",
-  "Päätökset syntyvät ilman turhia viiveitä.",
-  "Yhteistyö tiimin sisällä sujuu hyvin.",
-  "Prioriteetit ovat helppo ymmärtää ja seurata.",
-  "Nykyiset työkalut ja prosessit tukevat työtä hyvin.",
-  "Työmäärä tuntuu hallittavalta tavallisella viikolla.",
-  "Uusia ideoita ja parannusehdotuksia on helppo tuoda esiin.",
-  "Viestintä tiimin sisällä on selkeää ja oikea-aikaista.",
-  "Tiimillä on edellytykset tehdä hyvää työtä.",
+export interface SurveyQuestion {
+  text: string;
+  anchorLow: string;
+  anchorHigh: string;
+}
+
+export const surveyQuestions: SurveyQuestion[] = [
+  { text: "Koen hallitsevani omaa työtäni arjessa.", anchorLow: "En lainkaan", anchorHigh: "Erittäin hyvin" },
+  { text: "Minulle on selvää, mitä minun kuuluu tehdä päivittäin.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Pystyn priorisoimaan työtehtäväni arjessa.", anchorLow: "En pysty", anchorHigh: "Pystyn erittäin hyvin" },
+  { text: "Työn suunnittelu ja organisointi tuntuu minulle helpolta.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Työmääräni tuntuu hallittavalta suurimman osan ajasta.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Keskeytän itse itseni työssäni usein.", anchorLow: "En koskaan", anchorHigh: "Hyvin usein" },
+  { text: "Saan työni kannalta olennaisen tiedon ajoissa.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Minulle on selvää, mitä minulta odotetaan työssäni.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Yhteistyö muiden kanssa tukee omaa työni tekemistä.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Saan työssäni tukea silloin, kun sitä tarvitsen.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Uskallan tuoda esiin uusia ideoita ja kehitysehdotuksia.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Koen, että näkemyksilläni on merkitystä työssäni.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Koen työni tällä hetkellä mielekkääksi.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
 ];
 
 export function getResponseStatus(

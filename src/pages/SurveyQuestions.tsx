@@ -76,11 +76,16 @@ const SurveyQuestions = () => {
       </div>
 
       <h1 className="text-xl font-semibold text-foreground mb-10 leading-relaxed">
-        {surveyQuestions[currentIndex]}
+        {surveyQuestions[currentIndex].text}
       </h1>
 
       <div className="mb-10">
-        <ScaleInput value={currentAnswer} onChange={handleSelect} />
+        <ScaleInput
+          value={currentAnswer}
+          onChange={handleSelect}
+          anchorLow={surveyQuestions[currentIndex].anchorLow}
+          anchorHigh={surveyQuestions[currentIndex].anchorHigh}
+        />
       </div>
 
       <div className="flex gap-3">
