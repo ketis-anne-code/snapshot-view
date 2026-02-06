@@ -98,6 +98,7 @@ export type Database = {
           closes_at: string
           created_at: string
           id: string
+          opens_at: string | null
           order_id: string
           share_token: string
         }
@@ -105,6 +106,7 @@ export type Database = {
           closes_at: string
           created_at?: string
           id?: string
+          opens_at?: string | null
           order_id: string
           share_token?: string
         }
@@ -112,6 +114,7 @@ export type Database = {
           closes_at?: string
           created_at?: string
           id?: string
+          opens_at?: string | null
           order_id?: string
           share_token?: string
         }
@@ -130,9 +133,43 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      get_admin_distribution: {
+        Args: { p_survey_id: string }
+        Returns: {
+          bucket: number
+          n: number
+          question_key: string
+        }[]
+      }
       get_admin_response_count: {
         Args: { p_order_id: string }
         Returns: number
+      }
+      get_admin_survey_status: {
+        Args: { p_survey_id: string }
+        Returns: {
+          closes_at: string
+          data_state: string
+          group_type: string
+          opens_at: string
+          order_id: string
+          responses_count: number
+          survey_id: string
+          target_n: number
+        }[]
+      }
+      get_survey_public_info: {
+        Args: { p_token: string }
+        Returns: {
+          closes_at: string
+          group_type: string
+          survey_id: string
+          target_n: number
+        }[]
+      }
+      submit_survey_response: {
+        Args: { p_answers: Json; p_token: string }
+        Returns: string
       }
     }
     Enums: {

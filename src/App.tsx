@@ -15,6 +15,7 @@ import AdminSignIn from "./pages/AdminSignIn";
 import AdminCallback from "./pages/AdminCallback";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminOrderDetail from "./pages/AdminOrderDetail";
+import AdminResults from "./pages/AdminResults";
 import RespondentIntro from "./pages/RespondentIntro";
 import SurveyQuestions from "./pages/SurveyQuestions";
 import SurveyComplete from "./pages/SurveyComplete";
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/admin/callback" element={<AdminCallback />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/order/:orderId" element={<AdminOrderDetail />} />
+          <Route path="/admin/results/:surveyId" element={<AdminResults />} />
           <Route path="/admin/start" element={<AdminStart />} />
           <Route path="/admin/running" element={<AdminRunning />} />
           <Route path="/admin/snapshot" element={<AdminSnapshot />} />
