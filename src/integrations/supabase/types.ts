@@ -158,6 +158,19 @@ export type Database = {
           target_n: number
         }[]
       }
+      get_admin_survey_status_v2: {
+        Args: { p_survey_id: string }
+        Returns: {
+          closes_at: string
+          data_state: string
+          group_type: string
+          opens_at: string
+          order_id: string
+          responses_count: number
+          survey_id: string
+          target_n: number
+        }[]
+      }
       get_survey_public_info: {
         Args: { p_token: string }
         Returns: {

@@ -38,7 +38,7 @@ const App = () => (
           <Route path="/admin/results/:surveyId" element={<AdminResults />} />
           <Route path="/admin/start" element={<AdminStart />} />
           <Route path="/admin/running" element={<AdminRunning />} />
-          <Route path="/admin/snapshot" element={<AdminSnapshot />} />
+          <Route path="/admin/snapshot/:surveyId" element={<AdminSnapshot />} />
           <Route path="/admin/analysis" element={<AdminAnalysis />} />
           <Route path="/admin/final" element={<AdminFinal />} />
           <Route path="/survey/intro" element={<RespondentIntro />} />
