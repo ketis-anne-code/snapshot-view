@@ -168,12 +168,21 @@ const AdminOrderDetail = () => {
       </div>
 
       {survey && (
-        <Button
-          onClick={() => navigate(`/admin/results/${survey.id}`)}
-          className="w-full py-6 text-base rounded-lg"
-        >
-          Näytä tulokset
-        </Button>
+        <div className="space-y-3">
+          <Button
+            variant="outline"
+            onClick={() => navigate(`/admin/snapshot/${survey.id}`)}
+            className="w-full py-6 text-base rounded-lg"
+          >
+            Tilannekuva
+          </Button>
+          <Button
+            onClick={() => navigate(`/admin/results/${survey.id}`)}
+            className="w-full py-6 text-base rounded-lg"
+          >
+            Näytä tulokset
+          </Button>
+        </div>
       )}
     </PageShell>
   );
