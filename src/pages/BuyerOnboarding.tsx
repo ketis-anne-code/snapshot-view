@@ -74,7 +74,7 @@ const BuyerOnboarding = () => {
         <Input
           type="number"
           min={1}
-          max={25}
+          max={12}
           placeholder="esim. 12"
           value={respondentCount}
           onChange={(e) => setRespondentCount(e.target.value)}
