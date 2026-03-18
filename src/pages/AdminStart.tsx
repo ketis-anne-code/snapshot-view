@@ -31,6 +31,12 @@ const AdminStart = () => {
         <InfoRow label="Vastaajaryhmä" value={groupLabels[group]} />
         <InfoRow label="Tavoite" value={`${target} vastausta`} />
         <InfoRow label="Kysely auki" value="14 päivää" />
+        <div className="pt-4 border-t border-border">
+          <p className="text-sm font-medium text-foreground mb-1">Analyysin tilaaminen</p>
+          <p className="text-sm text-muted-foreground">
+            Voit tilata analyysin kun vastauksia on tarpeeksi tai kyselyn määräaika on täyttynyt. Palaa tähän hallintanäkymään milloin tahansa tallentamasi linkin kautta.
+          </p>
+        </div>
       </div>
 
       <div className="space-y-2 mb-8">
