@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils";
 import { RespondentGroup, groupLabels } from "@/lib/survey-data";
 
 const groups: { value: RespondentGroup; description: string }[] = [
-  { value: "expert", description: "Ihmiset jotka tekevät käytännön työn" },
-  { value: "manager", description: "Ihmiset jotka johtavat tiimejä ja koordinoivat" },
+  { value: "expert", description: "Tekijät ja asiantuntijat — ei esihenkilöitä" },
+  { value: "manager", description: "Tiiminvetäjät ja koordinoijat — ei asiantuntijoita" },
 ];
 
 const BuyerOnboarding = () => {
@@ -62,6 +62,9 @@ const BuyerOnboarding = () => {
             </div>
           </button>
         ))}
+        <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
+          Valitse ryhmä sen mukaan keneltä haluat tietoa. Voit tehdä erikseen kyselyn molemmille ryhmille jos haluat vertailla näkemyksiä.
+        </p>
       </div>
 
       <div className="space-y-2 mb-12">
