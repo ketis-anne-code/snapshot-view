@@ -80,9 +80,14 @@ const AdminAnalysis = () => {
           <p className="text-sm text-muted-foreground mb-3">
             Varaa aika yhteiselle läpikäynnille
           </p>
-          <div className="h-32 rounded-md border border-dashed border-border flex items-center justify-center text-sm text-muted-foreground">
-            Kalenterivaraus tulee tähän
-          </div>
+          <a
+            href="https://calendar.app.google/jKPiaLFbe1RqL7At9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-4 flex items-center justify-center rounded-md border border-border bg-surface text-sm font-medium text-primary hover:bg-lilac-soft transition-colors"
+          >
+            Varaa aika läpikäynnille →
+          </a>
         </div>
       )}
 
