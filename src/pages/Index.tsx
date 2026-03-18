@@ -22,7 +22,7 @@ const Index = () => {
           onClick={() => navigate("/admin/sign-in")}
           className="w-full py-6 text-base rounded-lg"
         >
-          Luo kysely
+          Kirjaudu sisään
         </Button>
         <Button
           onClick={() => navigate("/survey/intro")}
