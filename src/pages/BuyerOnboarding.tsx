@@ -18,7 +18,7 @@ const BuyerOnboarding = () => {
   const [respondentCount, setRespondentCount] = useState<string>("");
 
   const count = parseInt(respondentCount);
-  const isValid = selectedGroup && count >= 1 && count <= 25;
+  const isValid = selectedGroup && count >= 1 && count <= 12;
 
   const handleContinue = () => {
     if (isValid) {
