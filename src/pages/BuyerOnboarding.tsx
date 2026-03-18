@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils";
 import { RespondentGroup, groupLabels } from "@/lib/survey-data";
 
 const groups: { value: RespondentGroup; description: string }[] = [
-  { value: "expert", description: "Ihmiset jotka tekevät käytännön työn" },
-  { value: "manager", description: "Ihmiset jotka johtavat tiimejä ja koordinoivat" },
+  { value: "expert", description: "Tekijät ja asiantuntijat — ei esihenkilöitä" },
+  { value: "manager", description: "Tiiminvetäjät ja koordinoijat — ei asiantuntijoita" },
 ];
 
 const BuyerOnboarding = () => {
