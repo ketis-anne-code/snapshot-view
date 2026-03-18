@@ -19,6 +19,7 @@ import AdminResults from "./pages/AdminResults";
 import RespondentIntro from "./pages/RespondentIntro";
 import SurveyQuestions from "./pages/SurveyQuestions";
 import SurveyComplete from "./pages/SurveyComplete";
+import Checkout from "./pages/Checkout";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/onboarding" element={<BuyerOnboarding />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/admin/sign-in" element={<AdminSignIn />} />
           <Route path="/admin/callback" element={<AdminCallback />} />
           <Route path="/admin" element={<AdminDashboard />} />
