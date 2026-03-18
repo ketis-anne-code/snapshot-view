@@ -22,7 +22,7 @@ const BuyerOnboarding = () => {
 
   const handleContinue = () => {
     if (isValid) {
-      navigate("/admin/start", {
+      navigate("/checkout", {
         state: { group: selectedGroup, target: count },
       });
     }
