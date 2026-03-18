@@ -19,6 +19,7 @@ import AdminResults from "./pages/AdminResults";
 import RespondentIntro from "./pages/RespondentIntro";
 import SurveyQuestions from "./pages/SurveyQuestions";
 import SurveyComplete from "./pages/SurveyComplete";
+import Checkout from "./pages/Checkout";
 
 const queryClient = new QueryClient();
 
