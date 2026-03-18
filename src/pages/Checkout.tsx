@@ -107,6 +107,21 @@ const Checkout = () => {
         ))}
       </div>
 
+      <div className="p-4 bg-surface rounded-lg border border-border mb-6">
+        <p className="text-sm font-medium text-foreground mb-2">Näin se toimii:</p>
+        <ul className="space-y-1">
+          <li className="text-sm text-muted-foreground flex items-start gap-2">
+            <span className="text-primary mt-0.5">1.</span> Maksun jälkeen saat henkilökohtaisen hallintalinkin
+          </li>
+          <li className="text-sm text-muted-foreground flex items-start gap-2">
+            <span className="text-primary mt-0.5">2.</span> Jaat kyselylinkin tiimillesi — vastaaminen vie 5 minuuttia
+          </li>
+          <li className="text-sm text-muted-foreground flex items-start gap-2">
+            <span className="text-primary mt-0.5">3.</span> Kun vastauksia on tarpeeksi, tilaat analyysin hallintasivulta
+          </li>
+        </ul>
+      </div>
+
       <Button
         onClick={handleCheckout}
         disabled={!selected || loading}
