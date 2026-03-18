@@ -55,13 +55,20 @@ const AdminStart = () => {
         </div>
       </div>
 
-      <div className="space-y-4 mb-8 p-5 bg-surface rounded-lg border border-border">
+      <div className="space-y-3 mb-8 p-5 bg-surface rounded-lg border border-border">
         <h2 className="text-sm font-medium text-foreground">Näin jaat linkin</h2>
-        <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
-          <li>Lähetä linkki vastaajille sähköpostilla tai viestillä.</li>
-          <li>Jokainen vastaa kyselyyn itsenäisesti.</li>
-          <li>Vastaajat eivät näe tuloksia tai muiden vastauksia.</li>
-        </ul>
+        <p className="text-sm text-muted-foreground">Valmis viesti tiimillesi:</p>
+        <p className="text-sm text-muted-foreground leading-relaxed border border-border rounded-md p-3 bg-background">
+          {`Hei! Pyydän sinua vastaamaan lyhyeen kyselyyn arjen työskentelystä. Se vie noin 5 minuuttia ja vastauksesi pysyvät anonyymeinä. Linkki: ${surveyLink}`}
+        </p>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="text-xs text-primary"
+          onClick={() => navigator.clipboard.writeText(`Hei! Pyydän sinua vastaamaan lyhyeen kyselyyn arjen työskentelystä. Se vie noin 5 minuuttia ja vastauksesi pysyvät anonyymeinä. Linkki: ${surveyLink}`)}
+        >
+          Kopioi viesti
+        </Button>
       </div>
 
       <div className="space-y-2 mb-10 p-5 bg-surface rounded-lg border border-border">
