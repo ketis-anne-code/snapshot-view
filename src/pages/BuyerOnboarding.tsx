@@ -62,6 +62,9 @@ const BuyerOnboarding = () => {
             </div>
           </button>
         ))}
+        <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
+          Valitse ryhmä sen mukaan keneltä haluat tietoa. Voit tehdä erikseen kyselyn molemmille ryhmille jos haluat vertailla näkemyksiä.
+        </p>
       </div>
 
       <div className="space-y-2 mb-12">
