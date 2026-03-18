@@ -81,7 +81,7 @@ const BuyerOnboarding = () => {
           className="max-w-[160px] bg-surface"
         />
         <p className="text-xs text-muted-foreground">
-          Enintään 25 vastaajaa per kysely
+          Enintään 12 vastaajaa per kysely
         </p>
       </div>
 
