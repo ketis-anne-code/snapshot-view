@@ -18,7 +18,7 @@ const BuyerOnboarding = () => {
   const [respondentCount, setRespondentCount] = useState<string>("");
 
   const count = parseInt(respondentCount);
-  const isValid = selectedGroup && count >= 1 && count <= 25;
+  const isValid = selectedGroup && count >= 1 && count <= 12;
 
   const handleContinue = () => {
     if (isValid) {
@@ -74,14 +74,14 @@ const BuyerOnboarding = () => {
         <Input
           type="number"
           min={1}
-          max={25}
+          max={12}
           placeholder="esim. 12"
           value={respondentCount}
           onChange={(e) => setRespondentCount(e.target.value)}
           className="max-w-[160px] bg-surface"
         />
         <p className="text-xs text-muted-foreground">
-          Enintään 25 vastaajaa per kysely
+          Enintään 12 vastaajaa per kysely
         </p>
       </div>
 
