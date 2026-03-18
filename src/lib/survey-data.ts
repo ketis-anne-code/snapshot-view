@@ -13,18 +13,20 @@ export interface SurveyQuestion {
 }
 
 export const surveyQuestions: SurveyQuestion[] = [
-  { text: "Koen hallitsevani omaa työtäni arjessa.", anchorLow: "En lainkaan", anchorHigh: "Erittäin hyvin" },
   { text: "Minulle on selvää, mitä minun pitää kunakin päivänä saada tehtyä.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
-  { text: "Pystyn priorisoimaan työtehtäväni arjessa.", anchorLow: "En pysty", anchorHigh: "Pystyn erittäin hyvin" },
-  { text: "Työn suunnittelu ja organisointi tuntuu minulle helpolta.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Yhteistyö muiden kanssa tukee omaa työni tekemistä.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
   { text: "Työmääräni tuntuu hallittavalta suurimman osan ajasta.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
-  { text: "Keskeytän itse itseni työssäni usein.", anchorLow: "En koskaan", anchorHigh: "Hyvin usein" },
+  { text: "Uskallan tuoda esiin uusia ideoita ja kehitysehdotuksia.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Pystyn priorisoimaan työtehtäväni arjessa.", anchorLow: "En pysty", anchorHigh: "Pystyn erittäin hyvin" },
+  { text: "Palaverit ja yhteiset kokoukset tukevat omaa työntekoa.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Koen hallitsevani omaa työtäni arjessa.", anchorLow: "En lainkaan", anchorHigh: "Erittäin hyvin" },
+  { text: "Tiedän mistä löydän tarvitsemani tiedon työhöni liittyen.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Pystyn keskittymään työhöni silloin kun se on tarpeen.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Saan työssäni tukea silloin, kun sitä tarvitsen.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Työn suunnittelu ja organisointi tuntuu minulle helpolta.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
+  { text: "Koen, että näkemyksilläni on merkitystä työssäni.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
   { text: "Saan työni kannalta olennaisen tiedon ajoissa.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
   { text: "Minulle on selvää, mitä minulta odotetaan työssäni.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
-  { text: "Yhteistyö muiden kanssa tukee omaa työni tekemistä.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
-  { text: "Saan työssäni tukea silloin, kun sitä tarvitsen.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
-  { text: "Uskallan tuoda esiin uusia ideoita ja kehitysehdotuksia.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
-  { text: "Koen, että näkemyksilläni on merkitystä työssäni.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
   { text: "Koen työni tällä hetkellä mielekkääksi.", anchorLow: "Täysin eri mieltä", anchorHigh: "Täysin samaa mieltä" },
 ];
 
