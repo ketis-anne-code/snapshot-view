@@ -25,10 +25,16 @@ Deno.serve(async (req) => {
       apiVersion: "2024-12-18.acacia",
     });
 
+    // 590€ written-review → /admin/analysis, 390€ written → /admin/start
+    const defaultSuccessUrl =
+      priceId === "price_1TCNusAGo8WRIKeGuXiCG2Qr"
+        ? "https://quiet-snapshot.lovable.app/admin/analysis"
+        : "https://quiet-snapshot.lovable.app/admin/start";
+
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items: [{ price: priceId, quantity: 1 }],
-      success_url: successUrl || "https://quiet-snapshot.lovable.app/admin/start",
+      success_url: successUrl || defaultSuccessUrl,
       cancel_url: cancelUrl || "https://quiet-snapshot.lovable.app/checkout",
     });
 
