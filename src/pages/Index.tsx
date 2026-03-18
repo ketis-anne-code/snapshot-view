@@ -11,11 +11,10 @@ const Index = () => {
       <Logo />
 
       <h1 className="text-3xl font-semibold text-foreground mb-4 leading-tight">
-        Ymmärrä miten työ<br />oikeasti toimii
+        Miten työ sujuu?
       </h1>
       <p className="text-base text-muted-foreground mb-12 leading-relaxed max-w-sm">
-        Jäsennelty tapa nähdä, mikä arjen työssä toimii — ja mikä ei.
-        Ei vertailua, ei yksilötietoja.
+        Kerro kokemuksesi — vastauksesi pysyvät anonyymeinä.
       </p>
 
       <div className="space-y-3">
