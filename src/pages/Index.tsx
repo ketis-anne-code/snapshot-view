@@ -19,7 +19,7 @@ const Index = () => {
 
       <div className="space-y-3">
         <Button
-          onClick={() => navigate("/onboarding")}
+          onClick={() => navigate("/admin/sign-in")}
           className="w-full py-6 text-base rounded-lg"
         >
           Luo kysely
