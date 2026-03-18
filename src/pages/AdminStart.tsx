@@ -79,12 +79,6 @@ const AdminStart = () => {
         </Button>
       </div>
 
-      <div className="mt-8 pt-8 border-t border-border">
-        <p className="text-sm font-medium text-foreground mb-1">Analyysin tilaaminen</p>
-        <p className="text-sm text-muted-foreground">
-          Voit tilata analyysin kun vastauksia on tarpeeksi tai kyselyn määräaika on täyttynyt. Palaa tähän hallintanäkymään milloin tahansa tallentamasi linkin kautta.
-        </p>
-      </div>
 
       <Button
         onClick={() => navigate("/admin/running", { state: { group, target } })}
